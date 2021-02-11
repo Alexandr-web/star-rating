@@ -1,0 +1,64 @@
+@import '../../../node_modules/normalize.css/normalize';
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  resize: none;
+  outline: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 10px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.list-stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0 0 0;
+}
+
+.star {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  &__block {
+    width: 60px;
+    height: 60px;
+    background: #c2c2c2;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    margin-bottom: 25px;
+    transition: .4s;
+  }
+  &__value {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+}
+
+.active-star {
+  background: #FFDA04;
+}
+
+.active-value {
+  box-shadow: inset 0 -2px #5A75FF;
+}
